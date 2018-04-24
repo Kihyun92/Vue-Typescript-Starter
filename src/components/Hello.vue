@@ -6,49 +6,36 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'hello',
-  data () {
-    return {
-      message: 'Welcome to Your Vue.js App'
-    }
-  },
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-  computed: {
-    fullMessage(){
-      return `${this.message} from Typescript`;
-    }
-  },
+@Component({})
+export default class Hello extends Vue {
+  message: string = 'Hello Vue';
 
-  created() {
-    console.log('created');
-  },
-
-  methods: {
-    clicked(){
-      console.log('clicked');
-    }
+  clicked() {
+    console.log("clicked");
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 </style>
